@@ -1,0 +1,45 @@
+.signin {
+    margin-top: 30px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        width: 40%;
+
+        form {
+
+            .input-group {
+                label {
+                    padding: 3px;
+                }
+            }
+
+            .checkbox-group {
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
+
+            #form-email {
+                grid-area: email;
+                margin-top: 20px;
+            }
+
+            #form-password {
+                grid-area: pawwsord;
+                margin-top: 20px;
+            }
+
+            #form-rememberMe {
+                grid-area: remember;
+                margin-top: 20px;
+            }
+
+            #from-button {
+                grid-area: submit;
+               
+            }
+        }
+    }
+}

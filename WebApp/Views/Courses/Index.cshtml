@@ -1,0 +1,73 @@
+﻿@model CourseIndexViewModel
+@{
+    ViewData["Title"] = "Courses";
+}
+
+<section class="courses">
+    <div class="container">
+        <div class="header">
+            <h1>Courses</h1>
+            <form id="form-filters">
+                <select>
+                    <option>All categories</option>
+                </select>
+                <div class="input-search-group">
+                    <input id="searchQuery" name="searchQuery" placeholder="Search courses" />
+                   
+                </div>
+            </form>
+        </div>
+      
+
+       <div class="course-items">
+            @if (Model.Courses != null)
+            {
+                @foreach(var course in Model.Courses)
+                {
+                    <a class="course" asp-action="Details" asp-controller="Courses" asp-route-id="@course.Id">
+                        @if (course.IsBestSeller)
+                        {
+                            <div class="bestseller">Best Seller</div>
+                        }
+                        <button class="btn btn-circle bookmark"><i class="fa-regular fa-bookmark"></i></button>
+
+                        <img src="~/images/courses/@course.Image" alt="@course.Title" />
+
+                        <div class="content">
+                            <h5 class="title">@course.Title</h5>
+                            <p class="author">By @course.Author</p>
+                            <div class="pricing">
+                                @if (!string.IsNullOrEmpty(course.DiscoundPrice))
+                                {
+                                    <div class="discount">@course.DiscoundPrice</div>
+                                }
+                                <div class="price @(!string.IsNullOrEmpty(course.DiscoundPrice)?"discount-enabled" :"")">@course.Price</div>
+                            </div>
+                            <div class="footer">
+                                <div class="hours">
+                                    <i class="fa-regular fa-clock"></i> @course.Hourse hours
+                                </div>
+                                <div class="likes">
+                                    <i class="fa-regular fa-thumbs-up"> @course.LikeInProcent (@course.LikeInNumbers)</i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                   
+                }
+            }
+        </div>
+
+        <section class="level">
+            <div class="container">
+                <div class="content">
+                    <p>Ready to get started?</p>
+                    <h3>Take Your <strong>Skills</strong> to the <br> Next Level</h3>
+                    <a class="btn btn-theme" asp-action="TaskManagment" asp-controller="Products">Work with us</a>
+                </div>
+                <img src="~/images/other/levelpic.svg" alt="#">
+            </div>
+        </section>
+
+    </div>
+</section>

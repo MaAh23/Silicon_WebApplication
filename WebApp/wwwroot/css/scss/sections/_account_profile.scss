@@ -1,0 +1,108 @@
+.account-details {
+    margin-top: 20px;
+
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        gap: 150px;
+        margin-bottom: 70px;
+
+
+        aside {
+            width: 300px;
+            border-right: 1px solid var(--color-gray-400);
+            padding-right: 20px;
+        }
+
+        .content {
+            h1 {
+                padding-bottom: 20px;
+            }
+
+            .form-basic {
+                border-bottom: 1px solid var(--color-gray-400);
+                padding-bottom: 30px;
+
+                h5 {
+                    color: var(--color-theme);
+                    padding-bottom: 10px;
+                }
+
+                .form-content {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1rem 2rem;
+                    grid-template-areas: "firstname lastname" "email phone" "bio bio";
+                }
+
+                #form-firstname {
+                    grid-area: firstname;
+                }
+
+                #form-lastname {
+                    grid-area: lastname;
+                }
+
+                #form-email {
+                    grid-area: email;
+                }
+
+                #form-phone {
+                    grid-area: phone;
+                }
+
+                #form-bio {
+                    grid-area: bio;
+                    height: 100px;
+                    width: 100%;
+                }
+
+                .form-button {
+                    display: flex;
+                    gap: 15px;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .form-address {
+                padding-top: 30px;
+
+                h5 {
+                    color: var(--color-theme);
+                    padding-bottom: 10px;
+                }
+
+                .from-content {
+                    display: grid;
+                    gap: 1rem 2rem;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: "addressline_1 addressline_1 " "addressline_2 addressline_2" "postalcode city";
+                }
+
+                #form-addressline-1 {
+                    grid-area: addressline_1;
+                }
+
+                #form-addressline-2 {
+                    grid-area: addressline_2;
+                }
+
+                #form-postalcode {
+                    grid-area: postalcode;
+                }
+
+                #form-city {
+                    grid-area: city;
+                }
+
+                .form-button {
+                    display: flex;
+                    gap: 15px;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

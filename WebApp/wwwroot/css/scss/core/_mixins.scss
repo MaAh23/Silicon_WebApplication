@@ -1,0 +1,109 @@
+@mixin standartd-text {
+    line-height: 160%;
+    font-weight: 400;
+    color: var(--color-gray-700);
+    font-family: var(--font-standard);
+}
+
+@mixin standard-heading {
+    @include standartd-text();
+    font-weight: 800;
+    color: var(--color-gray-900);
+}
+
+@mixin text-nav {
+    @include standartd-text;
+    font-size: 16px;
+    color: var(--color-gray-800);
+    font-weight: 600;
+}
+
+@mixin text-xs {
+    @include standartd-text;
+    font-size: 12px;
+}
+
+@mixin text-s {
+    @include standartd-text;
+    font-size: 14px;
+}
+
+@mixin text-m {
+    @include standartd-text;
+    font-size: 16px;
+}
+
+@mixin text-lg {
+    @include standartd-text;
+    font-size: 18px;
+}
+
+@mixin text-xl {
+    @include standartd-text;
+    font-size: 20px;
+}
+
+@mixin text-lead {
+    @include standartd-text;
+    font-size: 24px;
+}
+
+@mixin text-d1 {
+    @include standard-heading;
+    font-size: 80px;
+}
+
+@mixin text-d2 {
+    @include standard-heading;
+    font-size: 72px;
+}
+
+@mixin text-d3 {
+    @include standard-heading;
+    font-size: 64px;
+}
+
+@mixin text-d4 {
+    @include standard-heading;
+    font-size: 56px;
+}
+
+@mixin text-d5 {
+    @include standard-heading;
+    font-size: 48px;
+}
+
+@mixin text-d6 {
+    @include standard-heading;
+    font-size: 42px;
+}
+
+@mixin text-h1 {
+    @include standard-heading;
+    font-size: 40px;
+}
+
+@mixin text-h2 {
+    @include standard-heading;
+    font-size: 32px;
+}
+
+@mixin text-h3 {
+    @include standard-heading;
+    font-size: 28px;
+}
+
+@mixin text-h4 {
+    @include standard-heading;
+    font-size: 24px;
+}
+
+@mixin text-h5 {
+    @include standard-heading;
+    font-size: 20px;
+}
+
+@mixin text-h6 {
+    @include standard-heading;
+    font-size: 16px;
+}
